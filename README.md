@@ -1,13 +1,13 @@
 # Module Federation with Angular
 ## TMDb - The Movie Database Microfrontend
 
-### [Microfrontend Container - Home](https://tmdb-microfrontend.vercel.app)
+### [Microfrontend Container - Home](#)
 
-### [Microfrontend Host - Details](https://tmdb-microfrontend-details.vercel.app/529203)
+### [Microfrontend Host - Details](#)
 
-### [Microfrontend Host - Collections](https://tmdb-microfrontend-collections.vercel.app)
+### [Microfrontend Host - Collections](#)
 
-### [Microfrontend Host - Favorites](https://tmdb-microfrontend-favorites.vercel.app)
+### [Microfrontend Host - Favorites](#)
 
 # Ambiente Desenvolvimento
 
