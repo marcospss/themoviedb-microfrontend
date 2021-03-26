@@ -9,7 +9,7 @@ import { environment } from '../environments/environment';
 import { Genres, Credits, ParamsUrl } from '../models';
 
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class CommonService {
 
   constructor(private http: HttpClient) { }

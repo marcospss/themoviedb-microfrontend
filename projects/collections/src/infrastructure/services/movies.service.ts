@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 import { MovieResults, MoviesDetails, ParamsUrl } from '../models';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class MoviesService {
   constructor(private http: HttpClient) {}
 

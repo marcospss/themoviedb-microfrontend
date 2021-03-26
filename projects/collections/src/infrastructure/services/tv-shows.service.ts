@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 import { TvResults, TvDetails, ParamsUrl } from '../models';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class TvShowsService {
   constructor(private http: HttpClient) {}
 

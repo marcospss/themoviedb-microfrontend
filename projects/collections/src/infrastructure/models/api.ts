@@ -7,7 +7,7 @@ export type ParamsUrl = {
 };
 
 export type StatusErrors = {
-  status_code: number;
-  status_message: string;
-  success: boolean;
+  status_code?: number;
+  status_message?: string;
+  success?: boolean;
 };
