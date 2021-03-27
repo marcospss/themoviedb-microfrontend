@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { IndexComponent } from '../grids/popular/index/index.component';
+import { MainComponent } from '../../views/main/main.component';
 
 const routes: Routes = [
-  {
-    path: 'popular',
-    component: IndexComponent
-  }
+  { path: '', component: MainComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

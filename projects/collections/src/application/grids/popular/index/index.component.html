@@ -1,3 +1,7 @@
+<p>
+  <a routerLink="/">Home</a>
+</p>
+
 <article *ngFor="let item of popular?.results;trackBy: trackByFn">
   <h1>{{item?.title}}</h1>
   <p>{{item?.overview}}</p>
