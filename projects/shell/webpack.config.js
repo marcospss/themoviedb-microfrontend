@@ -19,18 +19,18 @@ module.exports = {
     new ModuleFederationPlugin({
         remotes: {
             "collections": "collections@http://localhost:5010/remoteEntry.js",
-            "details": "details@http://localhost:5020/remoteEntry.js",
-            "favorites": "favorites@http://localhost:5030/remoteEntry.js",
+            // "details": "details@http://localhost:5020/remoteEntry.js",
+            // "favorites": "favorites@http://localhost:5030/remoteEntry.js",
         },
 
         shared: {
-          "@angular/core": { singleton: true, strictVersion: true }, 
-          "@angular/common": { singleton: true, strictVersion: true }, 
+          "@angular/core": { singleton: true, strictVersion: true },
+          "@angular/common": { singleton: true, strictVersion: true },
           "@angular/router": { singleton: true, strictVersion: true },
 
           ...sharedMappings.getDescriptors()
         }
-        
+
     }),
     sharedMappings.getPlugin(),
   ],
