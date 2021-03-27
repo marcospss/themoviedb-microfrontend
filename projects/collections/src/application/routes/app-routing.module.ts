@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { IndexComponent } from '../grids/popular/index/index.component';
+
+const routes: Routes = [
+  {
+    path: 'popular',
+    component: IndexComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
