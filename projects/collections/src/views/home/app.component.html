@@ -352,6 +352,13 @@
 
   <!-- Resources -->
   <h2>Resources</h2>
+  <article *ngFor="let item of popular?.results;trackBy: trackByFn">
+    <h1>{{item?.title}}</h1>
+    <p>{{item?.overview}}</p>
+    <hr />
+  </article>
+
+  <p *ngIf="error">{{error.status_message }}</p>
   <p>Here are some links to help you get started:</p>
 
   <div class="card-container">

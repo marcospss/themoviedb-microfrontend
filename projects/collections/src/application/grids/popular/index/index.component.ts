@@ -1,24 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MoviesService } from '../../infrastructure/services';
-import { MovieResults, StatusErrors } from '../../infrastructure/models';
+import { MoviesService } from '../../../../infrastructure/services';
+import { MovieResults, StatusErrors } from '../../../../infrastructure/models';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.scss']
 })
-export class AppComponent implements OnInit {
-
-  constructor(private moviesService: MoviesService) {}
-
-  ngOnInit(): void  {
-    this.movieResults();
-  }
-
+export class IndexComponent implements OnInit {
   error: StatusErrors = {};
   popular: MovieResults = {};
 
-  title = 'Collections';
+  constructor(private moviesService: MoviesService) {}
+
+  ngOnInit(): void {
+    this.movieResults();
+  }
 
   movieResults() {
     this.moviesService.popular({ page: 1 }).subscribe(

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './routes/app-routing.module';
 import { AppComponent } from '../views/home/app.component';
+import { GridsModule } from '../application/grids/grids.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { AppComponent } from '../views/home/app.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GridsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
