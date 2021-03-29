@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './routes/app-routing.module';
-import { GridsModule } from '../application/grids/grids.module';
+import { PopularModule } from '../application/popular/popular.module';
 
 import { AppComponent } from '../views/home/app.component';
 import { MainComponent } from '../views/main/main.component';
@@ -16,7 +16,7 @@ import { MainComponent } from '../views/main/main.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    GridsModule
+    PopularModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

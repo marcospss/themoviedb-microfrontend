@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MoviesService } from '../../../../infrastructure/services';
-import { MovieResults, StatusErrors } from '../../../../infrastructure/models';
+import { MoviesService } from '../../../infrastructure/services';
+import { MovieResults, StatusErrors } from '../../../infrastructure/models';
 
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.scss'],
-  providers: [MoviesService]
+  selector: 'app-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss']
 })
-export class IndexComponent implements OnInit {
+export class ListComponent implements OnInit {
+
   error: StatusErrors = {};
   popular: MovieResults = {};
 

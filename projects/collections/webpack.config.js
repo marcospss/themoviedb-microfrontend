@@ -22,7 +22,7 @@ module.exports = {
         name: "collections",
         filename: "remoteEntry.js",
         exposes: {
-            './Grids': './projects/collections/src/application/grids/grids.module.ts',
+            './Popular': './projects/collections/src/application/popular/popular.module.ts',
         },
 
         // For hosts (please adjust)
