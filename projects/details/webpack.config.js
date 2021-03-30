@@ -17,14 +17,14 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      
+
         // For remotes (please adjust)
-        // name: "details",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './projects/details/src/app/app.component.ts',
-        // },        
-        
+        name: "details",
+        filename: "remoteEntry.js",
+        exposes: {
+            './Details': './projects/details/src/application/information/information.module.ts',
+        },
+
         // For hosts (please adjust)
         // remotes: {
         //     "themoviedb-microfrontend": "themoviedb-microfrontend@http://localhost:4200/remoteEntry.js",
@@ -35,13 +35,13 @@ module.exports = {
         // },
 
         shared: {
-          "@angular/core": { singleton: true, strictVersion: true }, 
-          "@angular/common": { singleton: true, strictVersion: true }, 
+          "@angular/core": { singleton: true, strictVersion: true },
+          "@angular/common": { singleton: true, strictVersion: true },
           "@angular/router": { singleton: true, strictVersion: true },
 
           ...sharedMappings.getDescriptors()
         }
-        
+
     }),
     sharedMappings.getPlugin(),
   ],

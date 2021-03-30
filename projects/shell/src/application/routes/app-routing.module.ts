@@ -10,6 +10,11 @@ const PopularModule = async () => {
   return module.PopularModule;
 };
 
+const DetailsModule = async () => {
+  const module = await import('details/Details');
+  return module.InformationModule;
+};
+
 // const PopularModule = async () => {
 //   const module = await loadRemoteModule({
 //     remoteEntry: 'http://localhost:5010/remoteEntry.js',
@@ -22,12 +27,16 @@ const PopularModule = async () => {
 const routes: Routes = [
   { path: 'home', component: MainComponent},
   {
-    path: 'movies',
+    path: 'collections',
     loadChildren: PopularModule,
   },
   {
+    path: 'media',
+    loadChildren: DetailsModule,
+  },
+  {
     path: '',
-    redirectTo: 'movies/popular',
+    redirectTo: 'collections/popular',
     pathMatch: 'full',
   },
   {
