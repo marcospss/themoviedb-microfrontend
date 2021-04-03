@@ -20,7 +20,7 @@ module.exports = {
         remotes: {
             "collections": "collections@http://localhost:5010/remoteEntry.js",
             "details": "details@http://localhost:5020/remoteEntry.js",
-            // "favorites": "favorites@http://localhost:5030/remoteEntry.js",
+            "favorites": "favorites@http://localhost:5030/remoteEntry.js",
         },
 
         shared: {

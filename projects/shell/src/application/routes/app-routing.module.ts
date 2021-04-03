@@ -15,6 +15,11 @@ const DetailsModule = async () => {
   return module.InformationModule;
 };
 
+const FavoritesModule = async () => {
+  const module = await import('favorites/List');
+  return module.ListModule;
+};
+
 // const PopularModule = async () => {
 //   const module = await loadRemoteModule({
 //     remoteEntry: 'http://localhost:5010/remoteEntry.js',
@@ -33,6 +38,10 @@ const routes: Routes = [
   {
     path: 'media',
     loadChildren: DetailsModule,
+  },
+  {
+    path: 'favorites',
+    loadChildren: FavoritesModule,
   },
   {
     path: '',
