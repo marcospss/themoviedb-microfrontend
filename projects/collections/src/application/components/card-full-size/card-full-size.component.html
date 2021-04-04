@@ -1,0 +1,10 @@
+<header>
+  <figure>
+    <img [src]="utilsService.backdropImage(image)" [alt]="title" />
+    <figcaption>{{ title }}</figcaption>
+  </figure>
+  <h1><a href="#">{{ title }}</a></h1>
+</header>
+<p *ngIf="showOverview">
+  <a href="#">{{utilsService.overview(overview)}}</a>
+</p>

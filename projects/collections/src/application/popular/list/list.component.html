@@ -1,11 +1,15 @@
-<p>
-  <a routerLink="/home">Home</a>
-</p>
-
-<div class="popular">
-  <article class="popular-item" *ngFor="let item of popular?.results;trackBy: trackByFn">
-    <h1>{{item?.title}}</h1>
-    <p>{{item?.overview}}</p>
-    <hr />
-  </article>
+<div class="collection">
+  <h1 class="collection-title-section">Popular Movies</h1>
+  <div class="collection-popular-list">
+    <article
+      class="collection-popular-item"
+      *ngFor="
+        let item of popular?.results;
+        let indexItem = index;
+        trackBy: trackByFn
+      "
+    >
+      <app-card-full-size [title]="item.title" [overview]="item.overview" [showOverview]="indexItem === 0 || indexItem > 4" [image]="item.backdrop_path"></app-card-full-size>
+    </article>
+  </div>
 </div>

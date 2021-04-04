@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../../views/main/main.component';
 
 const routes: Routes = [
-  { path: 'home', component: MainComponent},
+  // { path: 'home', component: MainComponent},
   {
     path: '',
     redirectTo: 'popular',

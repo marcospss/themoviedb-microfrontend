@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MoviesService } from '../../../infrastructure/services';
-import { MovieResults, StatusErrors } from '../../../infrastructure/models';
+import { MovieResults, StatusErrors, MovieItem } from '../../../infrastructure/models';
 
 @Component({
   selector: 'app-list',
@@ -26,9 +26,8 @@ export class ListComponent implements OnInit {
     )
   }
 
-  // TODO: Remove any
-  trackByFn(index: number, item: any) {
-    return item?.results // or item.id
+  trackByFn(index: number, item: MovieItem) {
+    return item?.id;
   }
 
 }
