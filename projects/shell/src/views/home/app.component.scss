@@ -1,0 +1,13 @@
+.main-content {
+  display: flex;
+  justify-content: center;
+  background: #131a20;
+  position: relative;
+  margin: 0 auto;
+  padding: 8rem;
+  .container {
+      background: white;
+      border-radius: 5px;
+      padding: 30px;
+  }
+}
