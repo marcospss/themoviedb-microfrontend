@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
         min-height: 60vh;
         flex-direction: column;
         justify-content: center;
-        color: #294E80;
+        color: #131a20;
         text-transform: uppercase;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
         font-size: 1.5em;
@@ -49,8 +49,8 @@ import { Component } from '@angular/core';
         height: 46px;
         margin: 1px;
         border-radius: 50%;
-        border: 8px solid #294E80;
-        border-color: #294E80 transparent #294E80 transparent;
+        border: 8px solid #131a20;
+        border-color: #131a20 transparent #131a20 transparent;
         animation: lds-dual-ring 1.2s linear infinite;
     }
 

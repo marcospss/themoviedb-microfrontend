@@ -1,4 +1,4 @@
-<div class="collection">
+<div class="collection" *ngIf="popular$ | async; let popular; else: loading">
   <h1 class="collection-title-section">Popular Movies</h1>
   <div class="collection-popular-list">
     <article
@@ -9,7 +9,14 @@
         trackBy: trackByFn
       "
     >
-      <app-card-full-size [title]="item.title" [overview]="item.overview" [showOverview]="indexItem === 0 || indexItem > 4" [image]="item.backdrop_path"></app-card-full-size>
+      <app-card-full-size
+        [media]="item"
+        [showOverview]="indexItem === 0 || indexItem > 4"
+      >
+      </app-card-full-size>
     </article>
   </div>
 </div>
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

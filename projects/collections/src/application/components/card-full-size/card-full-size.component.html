@@ -1,10 +1,19 @@
 <header>
   <figure>
-    <img [src]="utilsService.backdropImage(image)" [alt]="title" />
-    <figcaption>{{ title }}</figcaption>
+    <img
+      [src]="utilsService.backdropImage(media.backdrop_path)"
+      [alt]="media.title"
+    />
+    <figcaption>{{ media.title }}</figcaption>
   </figure>
-  <h1><a href="#">{{ title }}</a></h1>
+  <h1>
+    <a [routerLink]="['/media/details/movie', media.id]">
+      {{ media.title }}
+    </a>
+  </h1>
 </header>
 <p *ngIf="showOverview">
-  <a href="#">{{utilsService.overview(overview)}}</a>
+  <a [routerLink]="['/media/details/movie', media.id]">
+    {{ utilsService.overview(media.overview) }}
+  </a>
 </p>

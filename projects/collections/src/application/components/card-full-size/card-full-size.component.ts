@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { UtilsService } from '../../../infrastructure/services';
+import { MovieItem } from './../../../infrastructure/models/movie';
 
 @Component({
   selector: 'app-card-full-size',
@@ -9,11 +10,7 @@ import { UtilsService } from '../../../infrastructure/services';
 })
 export class CardFullSizeComponent implements OnInit {
   @Input()
-  title!: string;
-  @Input()
-  overview!: string;
-  @Input()
-  image!: string;
+  media!: MovieItem;
   @Input()
   showOverview: boolean = false;
 

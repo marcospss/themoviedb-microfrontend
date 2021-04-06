@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 import { MoviesService } from '../../../infrastructure/services';
@@ -11,7 +12,7 @@ import { MovieResults, StatusErrors, MovieItem } from '../../../infrastructure/m
 export class ListComponent implements OnInit {
 
   error: StatusErrors = {};
-  popular: MovieResults = {};
+  popular$!: Observable<MovieResults>
 
   constructor(private moviesService: MoviesService) {}
 
@@ -20,10 +21,11 @@ export class ListComponent implements OnInit {
   }
 
   movieResults() {
-    this.moviesService.popular({ page: 1 }).subscribe(
-      (data: MovieResults) => this.popular = data,
-      error => this.error = error
-    )
+    this.popular$ = this.moviesService.popular({ page: 1 });
+    // this.moviesService.popular({ page: 1 }).subscribe(
+    //   (data: MovieResults) => this.popular = data,
+    //   error => this.error = error
+    // )
   }
 
   trackByFn(index: number, item: MovieItem) {
