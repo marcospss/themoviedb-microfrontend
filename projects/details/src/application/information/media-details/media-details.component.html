@@ -3,7 +3,14 @@
   *ngIf="details$ | async; let details; else: loading"
 >
   <nav>
-    <a routerLink="/">Home</a>
+    <ul class="breadcrumb">
+      <li>
+        <a routerLink="/">Home</a>
+      </li>
+      <li>
+        <a>{{ details.title }}</a>
+      </li>
+    </ul>
   </nav>
 
   <figure>
