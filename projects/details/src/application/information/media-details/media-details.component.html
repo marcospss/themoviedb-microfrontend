@@ -30,9 +30,9 @@
   </header>
   <p class="overview">{{ details.overview }}</p>
   <hr />
-  <app-recommendations></app-recommendations>
+  <app-recommendations [mediaId]="details.id.toString()"></app-recommendations>
   <hr />
-  <app-similar></app-similar>
+  <!--app-similar></app-similar-->
 </article>
 <ng-template #loading>
   <h1>Loading...</h1>

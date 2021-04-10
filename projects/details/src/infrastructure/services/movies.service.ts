@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
-import { catchError, map, retry } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 
 import { environment } from '../environments/environment';
 import { MovieResults, MoviesDetails, ParamsUrl } from '../models';
@@ -64,9 +64,7 @@ export class MoviesService {
       .get<MovieResults>(
         `${environment.baseURL}/movie/popular?${environment.paramsDefault}&page=${page}`
       )
-      .pipe(
-        catchError(this.handleError)
-      );
+      .pipe(catchError(this.handleError));
   }
 
   topRated({ page = 1 }: ParamsUrl): Observable<MovieResults> {
@@ -99,5 +97,4 @@ export class MoviesService {
     // Return an observable with a user-facing error message.
     return throwError('Something bad happened; please try again later.');
   }
-
 }

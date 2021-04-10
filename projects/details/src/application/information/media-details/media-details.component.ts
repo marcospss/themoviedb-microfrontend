@@ -38,7 +38,7 @@ export class MediaDetailsComponent implements OnInit, OnDestroy {
     this.subscriptionRoute.unsubscribe();
   }
 
-  fetchDetails(mediaId: string) {
+  private fetchDetails(mediaId: string) {
     this.details$ = this.moviesService.details({ mediaId });
   }
 }
