@@ -151,7 +151,7 @@
             "aot": true,
             "assets": [
               "projects/collections/src/favicon.ico",
-              "projects/collections/src/application/assets"
+              "projects/collections/src/assets"
             ],
             "styles": [
               "projects/collections/src/application/styles/main.scss"
@@ -219,7 +219,7 @@
             "karmaConfig": "projects/collections/karma.conf.js",
             "assets": [
               "projects/collections/src/favicon.ico",
-              "projects/collections/src/application/assets"
+              "projects/collections/src/assets"
             ],
             "styles": [
               "projects/collections/src/application/styles/main.scss"
@@ -280,7 +280,7 @@
             "aot": true,
             "assets": [
               "projects/details/src/favicon.ico",
-              "projects/details/src/application/assets"
+              "projects/details/src/assets"
             ],
             "styles": [
               "projects/details/src/application/styles/main.scss"
@@ -348,7 +348,7 @@
             "karmaConfig": "projects/details/karma.conf.js",
             "assets": [
               "projects/details/src/favicon.ico",
-              "projects/details/src/application/assets"
+              "projects/details/src/assets"
             ],
             "styles": [
               "projects/details/src/application/styles/main.scss"
@@ -409,7 +409,7 @@
             "aot": true,
             "assets": [
               "projects/favorites/src/favicon.ico",
-              "projects/favorites/src/application/assets"
+              "projects/favorites/src/assets"
             ],
             "styles": [
               "projects/favorites/src/application/styles/main.scss"
@@ -477,7 +477,7 @@
             "karmaConfig": "projects/favorites/karma.conf.js",
             "assets": [
               "projects/favorites/src/favicon.ico",
-              "projects/favorites/src/application/assets"
+              "projects/favorites/src/assets"
             ],
             "styles": [
               "projects/favorites/src/application/styles/main.scss"
@@ -538,7 +538,7 @@
             "aot": true,
             "assets": [
               "projects/shell/src/favicon.ico",
-              "projects/shell/src/application/assets"
+              "projects/shell/src/assets"
             ],
             "styles": [
               "projects/shell/src/application/styles/main.scss"
@@ -606,7 +606,7 @@
             "karmaConfig": "projects/shell/karma.conf.js",
             "assets": [
               "projects/shell/src/favicon.ico",
-              "projects/shell/src/application/assets"
+              "projects/shell/src/assets"
             ],
             "styles": [
               "projects/shell/src/application/styles/main.scss"
