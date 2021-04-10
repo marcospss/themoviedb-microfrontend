@@ -9,7 +9,6 @@ $green-darken: #16a085;
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
   background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
@@ -147,7 +146,6 @@ $green-darken: #16a085;
   figure {
     margin: 0;
     width: 100%;
-    min-height: 100vh;
     height: 100%;
     position: relative;
     img {
