@@ -4,18 +4,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { INFORMATION_ROUTES } from './information.routes';
+
+import { MoviesService, UtilsService } from '../../infrastructure/services';
+
 import { MediaDetailsComponent } from './media-details/media-details.component';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { SimilarComponent } from './similar/similar.component';
 
-
-
 @NgModule({
-  declarations: [MediaDetailsComponent, RecommendationsComponent, SimilarComponent],
+  declarations: [
+    MediaDetailsComponent,
+    RecommendationsComponent,
+    SimilarComponent,
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule.forChild(INFORMATION_ROUTES)
-  ]
+    RouterModule.forChild(INFORMATION_ROUTES),
+  ],
+  providers: [MoviesService, UtilsService],
 })
-export class InformationModule { }
+export class InformationModule {}
